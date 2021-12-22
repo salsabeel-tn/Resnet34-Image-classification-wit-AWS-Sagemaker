@@ -9,10 +9,10 @@ Download/Make the dataset available.
 ## Dataset
 Dog breed: consists of 3 sub atasets, train/test/evaluation.
 
-### Access
+## Access
 Upload the data to an S3 bucket through the AWS Gateway so that SageMaker has access to the data. 
 
-##helper files:
+## helper files: <br>
 hpo.py: used to tune the hyperparameters by setting up a search space where it traines the model with different values of "lr" and "batch-size" till it finds the best set of HPs.<br>
 train_model.py: after choosing best HPs, this script traines the model using them, here i set the profiling and debugging configs. <br>
 ineference_alt.py: for endpoint deployment and for processing the data before it is passed to the endpoint for testing puposes. <br><br>
