@@ -18,7 +18,7 @@ train_model.py: after choosing best HPs, this script traines the model using the
 ineference_alt.py: for endpoint deployment and for processing the data before it is passed to the endpoint for testing puposes. <br><br>
 
 ## Hyperparameter Tuning
-What kind of model did you choose for this experiment and why? Give an overview of the types of parameters and their ranges used for the hyperparameter search
+What kind of model did you choose for this experiment and why? Give an overview of the types of parameters and their ranges used for the hyperparameter search<br>
 I used Resnet34 pretrained model and 3 fully connected layers,hyperparameter searchspaces are "lr" which is the learning rates and "batch-size"<br>
 
 ### HPs tuning summery:<br><br>
@@ -29,26 +29,29 @@ I used Resnet34 pretrained model and 3 fully connected layers,hyperparameter sea
 ![bestjob.jpg](https://github.com/salsabeel-tn/Resnet34-Image-classification-with-sagemaker/blob/master/img/besttrainingjobconfig.jpg)<br>
 ### in the contrary, here is the least effective Hps and their job:<br>
 ![worstjob.jpg](https://github.com/salsabeel-tn/Resnet34-Image-classification-with-sagemaker/blob/master/img/worstHP.jpg)<br>
-Remember that your README should:
-- Include a screenshot of completed training jobs
-- Logs metrics during the training process
-- Tune at least two hyperparameters
-- Retrieve the best best hyperparameters from all your training jobs
+
+
 
 ## Debugging and Profiling
-**TODO**: Give an overview of how you performed model debugging and profiling in Sagemaker
-
+The Debugger Hook is set to record the Loss Criterion of the process in both training and validation/testing. The Plot of the Cross Entropy Loss is shown below.<br>
+![debugplot.jpg](https://github.com/salsabeel-tn/Resnet34-Image-classification-with-sagemaker/blob/master/img/debuggingplot.jpg)<br>
+we can see that the line is volatile during the validation phase. We can eliminate this by changing weights and/or adding more fully connected layers.<br>
+### profiling report is automatically generated and the .html file is availabe in profiler folder.<br>
 ### Results
-**TODO**: What are the results/insights did you get by profiling/debugging your model?
-
-**TODO** Remember to provide the profiler html/pdf file in your submission.
+results are in general satisfying as the profiler report indicates that there were no bottleneck rules triggered at all.
 
 
 ## Model Deployment
 **TODO**: Give an overview of the deployed model and instructions on how to query the endpoint with a sample input.
 
 **TODO** Remember to provide a screenshot of the deployed active endpoint in Sagemaker.
+**for inefernce i used a helper script "inference_alt.py" to deploy my endpoint:**<br>
+this is the deployed endpoint<br>
+![endpoint](https://github.com/salsabeel-tn/Resnet34-Image-classification-with-sagemaker/blob/master/img/endpoint.jpg)
 
-## Standout Suggestions
-**TODO (Optional):** This is where you can provide information about any standout suggestions that you have attempted.
+### Querying:
+I made one which is a random image from the test dataset that i uploaded, the restults were very close to the actual species of the dog, you can find the result in the notebook and the following are the logs from CloudWatch:<br>
+![logs](https://github.com/salsabeel-tn/Resnet34-Image-classification-with-sagemaker/blob/master/img/queries.jpg)
+
+
 
