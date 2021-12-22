@@ -21,8 +21,8 @@ ineference_alt.py: for endpoint deployment and for processing the data before it
 What kind of model did you choose for this experiment and why? Give an overview of the types of parameters and their ranges used for the hyperparameter search
 I used Resnet34 pretrained model and 3 fully connected layers,hyperparameter searchspaces are "lr" which is the learning rates and "batch-size"<br>
 
-best HPs:
-![model_test_score.png](fig2.png)
+HPs tuning summery:
+![Hpstunning.jpg](hptunning.jpg)
 
 Remember that your README should:
 - Include a screenshot of completed training jobs
