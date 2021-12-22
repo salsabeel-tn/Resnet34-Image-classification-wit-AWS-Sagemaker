@@ -22,7 +22,7 @@ What kind of model did you choose for this experiment and why? Give an overview 
 I used Resnet34 pretrained model and 3 fully connected layers,hyperparameter searchspaces are "lr" which is the learning rates and "batch-size"<br>
 
 HPs tuning summery:
-![Hpstunning.jpg](hptunning.jpg)
+![hptunning.jpg](https://github.com/salsabeel-tn/Resnet34-Image-classification-with-sagemaker/blob/master/img/hptunning.jpg)
 
 Remember that your README should:
 - Include a screenshot of completed training jobs
