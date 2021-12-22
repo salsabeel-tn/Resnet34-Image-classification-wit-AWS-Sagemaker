@@ -21,9 +21,14 @@ ineference_alt.py: for endpoint deployment and for processing the data before it
 What kind of model did you choose for this experiment and why? Give an overview of the types of parameters and their ranges used for the hyperparameter search
 I used Resnet34 pretrained model and 3 fully connected layers,hyperparameter searchspaces are "lr" which is the learning rates and "batch-size"<br>
 
-HPs tuning summery:
-![hptunning.jpg](https://github.com/salsabeel-tn/Resnet34-Image-classification-with-sagemaker/blob/master/img/hptunning.jpg)
+### HPs tuning summery:<br><br>
 
+![hptunning.jpg](https://github.com/salsabeel-tn/Resnet34-Image-classification-with-sagemaker/blob/master/img/hptunning.jpg) <br>
+
+### best training and best HPs: <br><br>
+![bestjob.jpg](https://github.com/salsabeel-tn/Resnet34-Image-classification-with-sagemaker/blob/master/img/besttrainingjobconfig.jpg)<br>
+### in the contrary, here is the least effective Hps and their job:<br>
+![worstjob.jpg](https://github.com/salsabeel-tn/Resnet34-Image-classification-with-sagemaker/blob/master/img/worstHP.jpg)<br>
 Remember that your README should:
 - Include a screenshot of completed training jobs
 - Logs metrics during the training process
