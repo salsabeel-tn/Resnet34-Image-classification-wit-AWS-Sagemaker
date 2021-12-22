@@ -1,10 +1,9 @@
 # Resnet34-Image-classification-with-sagemaker
 In this project I used Resnet which is a pretrained model to classify different dog types availabe in the dataset provided by Udacity in its ND program.
 
-## Project Set Up and Installation
-Enter AWS through the gateway in the course and open SageMaker Studio. 
-Download the starter files.
-Download/Make the dataset available. 
+## Project Set Up and Installation 
+
+use sagemaker UI to clone the repo and follow the steps in the starter notebook.
 
 ## Dataset
 Dog breed: consists of 3 sub atasets, train/test/evaluation.
@@ -42,9 +41,7 @@ results are in general satisfying as the profiler report indicates that there we
 
 
 ## Model Deployment
-**TODO**: Give an overview of the deployed model and instructions on how to query the endpoint with a sample input.
 
-**TODO** Remember to provide a screenshot of the deployed active endpoint in Sagemaker.
 **for inefernce i used a helper script "inference_alt.py" to deploy my endpoint:**<br>
 this is the deployed endpoint<br>
 ![endpoint](https://github.com/salsabeel-tn/Resnet34-Image-classification-with-sagemaker/blob/master/img/endpoint.jpg)
